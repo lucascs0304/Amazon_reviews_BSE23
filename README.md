@@ -4,42 +4,42 @@
 
 This repository contains the files for the final project of Advanced Natural Language Processing course in winter term of 2023 of Barcelona School of Economics.
 
-The dataset is available via [this link](https://huggingface.co/datasets/amazon_us_reviews) in the Hugging Face community website
+The dataset used for this work is available in [this link](https://huggingface.co/datasets/amazon_us_reviews).
 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
-## Table of Contents (Optional)
+## Baseline models
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+For the baseline models we applied a logistic regression. Surprisingly the best results were obtained by this simple model without any pre-processing, after we apply some pre processing
 
-- [Usage](#usage)
-- [Main Findings](#Main Findings)
-- [License](#license)
+## Neural Network
 
 
-## Main Findings
+## BERT
 
-Provide instructions and examples for use. Include screenshots as needed.
+In this section we will develop a multi-class text classifier using BERT (Bidirectional Encoder Representations from Transformers), a Machine Learning model based on transformers², i.e. attention components able to learn contextual relations between words.
+
+For the purpose of classification, we need numeric labels. Therefore, we map the topics descriptions to integers. Also, we make use of the bert_en_uncased_preprocess/L-12_H-768_A-12 model, a matching text preprocessing models and the pre-trained encoder provided by TensorFlow.
+What we want to achieve is to turn text into high-dimensional vectors that capture sentence-level semantics. Therefore, we proceed by loading the preprocessor and the encoder layers from the endpoints provided by TensorFlow Hub and define a simple function to get the embeddings from input text.
+As the model is based on the BERT transformer architecture, it will generate a pooled_output (output embedding of the entire sequence). 
+
+As we are facing a multi-class classification problem, and we previously noticed that our topics distribution is highly imbalanced, we might want to observe different metrics during model training.
+
+We initially split the dataset in train and test set, but we used both during the training and validation procedure.
+In order to fairly estimate our performances, we evaluate the quality of the predictions on a new dataset containing observations that were not “seen” by the model during training (blind set).
+
+
 
 
 ## Credits
 
-Supervisor: Arnault Gombert
+Supervisor: Arnault Gombert(https://github.com/agombert)
 
 Collaborators:
-- [Erika Gutierrez]()
+- [Erika Gutierrez](https://github.com/erikaguti)
 - Lucas Santos
 - [Margherita Phillip]()
-- [Renato Vassalo]()
-
-
-
-## License
-
+- [Renato Vassalo](https://github.com/RenatoVassallo)
 
 
 
