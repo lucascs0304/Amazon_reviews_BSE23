@@ -43,7 +43,7 @@ Collaborators:
 
 
 
-## Future directions and extensions
+## Limitations and future directions
 
-This worked focused on the text classification task using a subset of the amazon reviews dataset. Future directions could be 
+This worked focused on the text classification task using a subset of the amazon reviews dataset. Our model presented bias ... Future directions could be using the whole dataset to train the model and trying to apply the same tasks to all the categories available, exposing the model to categories with high level of similarity and assess the perform of the model on it.
 
