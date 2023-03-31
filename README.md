@@ -10,7 +10,7 @@ The dataset used for this work is available in [this link](https://huggingface.c
 
 ## Baseline models
 
-For the baseline models we applied a logistic regression. Surprisingly the best results were obtained by this simple model without any pre-processing, after we apply some pre processing
+For the baseline models we applied a logistic regression. Surprisingly the best results were obtained by this simple model without any pre-processing, just applying the TF-IDF vectorizer to encode the text data. After we developed and applied some pre processing like clean text, remove stopwords and stemming and applied after the logistic regression model. The results can be seen in the .ipynb file attached. 
 
 ## Neural Network
 
@@ -33,7 +33,7 @@ In order to fairly estimate our performances, we evaluate the quality of the pre
 
 ## Credits
 
-Supervisor: Arnault Gombert(https://github.com/agombert)
+Supervisor: [Arnault Gombert](https://github.com/agombert)
 
 Collaborators:
 - [Erika Gutierrez](https://github.com/erikaguti)
@@ -45,5 +45,5 @@ Collaborators:
 
 ## Limitations and future directions
 
-This worked focused on the text classification task using a subset of the amazon reviews dataset. Our model presented bias ... Future directions could be using the whole dataset to train the model and trying to apply the same tasks to all the categories available, exposing the model to categories with high level of similarity and assess the perform of the model on it.
+This worked focused on the text classification task using a subset of the amazon reviews dataset. Future directions could be using the whole dataset to train the model and trying to apply the same tasks to all the categories available, exposing the model to categories with high level of similarity and assess the perform of the model on it.
 
